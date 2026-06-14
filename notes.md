@@ -1,24 +1,18 @@
-COURSE RESEARCH NOTES
-
+## COURSE STRUCTURE
 How does claude use shell to research a codebase? Can  you get a list of shell commands run?
 
 Course submission:
   https://docs.google.com/document/d/1puS896JkDgNtpo41cLRjMpq1qkRvRuXhSRl7w-PllPY/edit?tab=t.0
 
-
-General
+### General comments
   "AI uses shell as its hands"
   AI uses shell and the command line to quickly inspect things, just like people do
   Shells allow AI to glue processes together
   Shells are very concise - fewer tokens!
+  Focussing on Claude
 
-The `.claude` folder
-  Where all the claude related stuff is. There's one in your home folder, and in each folder you've spun claude up in.
-  claude sets the ~/.gitignore file to ignore .claude/settings.local.json files, so it doesn't get added to git
-
-Terminology:
+### Theory
   Agent
-    And, specifically a claude agent (in .claude/agents)
   Agentic AI
   Command
     https://code.claude.com/docs/en/commands
@@ -26,7 +20,7 @@ Terminology:
     Type / to see commands
     eg a markdown file with instructions, eg 'Review my pull request'
     What's the difference between a command and skill? A command is explicitly called by the user. A skill is dynamically chosen by the LLM and then invoked into the context. Confusingly, a skill can be invoked as a command as well.
-  Tool
+  Tools
   Agent Skills
     https://agentskills.io/home
     An agent skill is a skill specifically designed to be used by a Claude sub-agent (or specialized agent) when Claude delegates a task.
@@ -42,12 +36,44 @@ Terminology:
         This looks like an MCP problem. I'll delegate analysis to the mcp-expert agent.
     eg create an agent in the mcp server
   Hooks
+  LLM
   Monitor
   Skills
     https://support.claude.com/en/articles/12512176-what-are-skills
     A skill can become a command
   Plugins
   Subagents
+
+
+#### High Level Concepts
+
+LLM
+  The 'thing' that takes input (context) and produces output (simple view - internals of LLMs can get much more complex)
+Agent
+  Program that manages input and output to an LLM
+  It's just a program. The program manages how the LLM is called and what to do with its outputs.
+  But these programs follow certain patterns (which brings us to other agent concepts).
+  And, specifically a claude agent (in .claude/agents)
+  How the agent does this is its secret sauce (if it's not open source). It might add data to your "prompt" before it dispatches is to the LLM.
+Agentic AI
+  TODO
+
+#### Agent Concepts (covered in own sections)
+Subagent
+Hooks
+Commands
+Skills
+Tools (and MCP Servers)
+  MCP
+Monitor
+Plugins
+
+Any more terminology of interest?
+
+### Shell and Agents
+The `.claude` folder
+  Where all the claude related stuff is. There's one in your home folder, and in each folder you've spun claude up in.
+  claude sets the ~/.gitignore file to ignore .claude/settings.local.json files, so it doesn't get added to git
 
 Data preparation:
   Uses fiddly commands to carry out user demands, eg:
@@ -225,9 +251,11 @@ in ~/.claude/settings
 
 Worth reading: https://code.claude.com/docs/en/tools-reference
 
-### Create a tool
+### Tools
 
-TODO: Replace with ~/git/ianmiell-mcp-server on klimt
+#### Create a tool
+
+Replace with ~/git/ianmiell-mcp-server on klimt
 
 Break down the tool and how it works.
 
@@ -240,7 +268,9 @@ https://code.claude.com/docs/en/tools-reference
 
 
 
-### What is a monitor? Create a montitor
+### Monitors
+
+What is a monitor? Create a montitor
 
 Inbuilt tool. It can watch for things and take actions.
 
@@ -282,4 +312,5 @@ Plugins have scopes: user, project, local, managed
 Plugins give you a namespace for plugin calls, eg /myplugin:hello
 
 #### Creating a plugin
+TODO show how to create a plugin
 https://code.claude.com/docs/en/plugins#convert-existing-configurations-to-plugins
