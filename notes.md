@@ -1,6 +1,12 @@
 ## COURSE STRUCTURE
 How does claude use shell to research a codebase? Can  you get a list of shell commands run?
 
+TODO look at these suggestions:
+  - I believe things like NVIDIA’s OpenShell, and their secure sandbox approach to agents might be worth covering?
+  - Can recommend to look at Wave, I moved from my Alacritty/tmux setup and very much enjoy it
+  - language servers (LSP)
+  - Task scheduling is a good one - my agents lean on `atd` pretty hard and cron for other things, I like both better than the built-in scheduling tooling which I have poor visibility into and can't modify without a chat. Also I'd be sure to discuss the value of a pre-flight api health check hook and configuring fallback models.
+
 Course submission:
   https://docs.google.com/document/d/1puS896JkDgNtpo41cLRjMpq1qkRvRuXhSRl7w-PllPY/edit?tab=t.0
 
