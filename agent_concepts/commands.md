@@ -1,7 +1,10 @@
-  Command
-    https://code.claude.com/docs/en/commands
-    Things beginning with /
-    Type / to see commands
+## Commands
+
+https://code.claude.com/docs/en/commands
+
+Things beginning with /
+
+Type / to see commands
     eg a markdown file with instructions, eg 'Review my pull request'
     What's the difference between a command and skill? A command is explicitly called by the user. A skill is dynamically chosen by the LLM and then invoked into the context. Confusingly, a skill can be invoked as a command as well.
 
@@ -16,8 +19,8 @@ watch for the creation of a file 'asd' in this folder, and when it is created, o
 Then start claude:
 
 ```
-/ok
-/argh
+/ok                  # to get ok monitor running
+/argh                # to get argh monitor running
 ```
 
 Create and remove the files
@@ -27,5 +30,14 @@ touch asd
 rm asd
 ```
 
-touch asd ## The monitor only runs once.
+Try running them again:
+
+```
+touch asd ## Note that the monitor only runs once.
+```
+
+
+### Cleanup
+
+`rm -f ~/.claude/commands/ok.md ~/.claude/commands/argh.md`
 

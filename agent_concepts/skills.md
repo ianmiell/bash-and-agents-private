@@ -1,8 +1,10 @@
-  Skills
+## Skills
     https://support.claude.com/en/articles/12512176-what-are-skills
     A skill can become a command
 
-### Create skill in course
+AKA Agent Skills
+
+### Walkthrough
 
 ```
 cd ~/.claude/skills/

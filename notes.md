@@ -20,6 +20,10 @@ Course submission:
   Shells are very concise - fewer tokens!
   Focussing on Claude
 
+### Other
+You can run commands with `shell command`
+It burns tokens (obvs) and takes longer though!
+
 #### High Level Concepts
 LLM
   The 'thing' that takes input (context) and produces output (simple view - internals of LLMs can get much more complex)
@@ -35,7 +39,6 @@ Harness
   Agent = LLM + Harness
 
 #### Agent Concepts (covered in own sections)
-agent_skills.md
 commands.md
 hooks.md
 monitors.md

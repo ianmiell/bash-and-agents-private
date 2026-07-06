@@ -1,8 +1,10 @@
-### Create hook
+## Hooks
 
 https://code.claude.com/docs/en/hooks-guide
 
-Add this to ~/.claude/settings
+
+### Walkthrough
+Add this to ~/.claude/settings.json
 
 ```
   "hooks": {
@@ -59,7 +61,7 @@ To log all tool uses:
   }
 ```
 
-in ~/.claude/settings
+in ~/.claude/settings.json
 
 Worth reading: https://code.claude.com/docs/en/tools-reference
 
