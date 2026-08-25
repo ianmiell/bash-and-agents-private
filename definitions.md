@@ -1,3 +1,6 @@
+Define some terms related to what we are discussing.
+Any terms that confuse people?
+
 #### High Level Concepts
 LLM
   The 'thing' that takes input (context) and produces output (simple view - internals of LLMs can get much more complex)

@@ -1,21 +1,11 @@
 ## Skills
     https://support.claude.com/en/articles/12512176-what-are-skills
-    A skill can become a command
-
-AKA Agent Skills
 
 ### Walkthrough
 
 ```
-cd ~/.claude/skills/
-mkdir hellworld
-cd helloworld
-cat > SKILL.md << EOF
-Say hello world
-EOF
-cd
-claude
-/helloworld
+cd ~/git/bash-and-agents-project
+git switch 1-helloworld-simple
 ```
 
 How does a skill get triggered automatically?
@@ -43,25 +33,12 @@ To reload skills:
 Adding scripts:
 
 ```
-cd ~/.claude/skills/helloworld
-mkdir scripts
-cd scripts
-cat > hello_world.sh << EOF
-echo Hello World from scripts
-EOF
-chmod +x hello_world.sh
-cd
-claude
-say hello world  # Doesn't trigger script
-EXIT CLAUDE
-cat > ~/.claude/skills/helloworld/SKILL.md << EOF
-This skills says hello world. Call the script hello_world.sh if asked to say hello world.
-EOF
-cd -
-claude
-say hello world  # Doesn't trigger script - does not find it
-cat > ~/.claude/skills/helloworld/SKILL.md << EOF
-This skills says hello world. Call the script scripts/hello_world.sh if asked to say hello world.
-EOF
+cd ~/git/bash-and-agents-project
+git switch 2-helloworld-script
 ```
 
+If a skill is not 'chosen' by the harness, you can call it as a 'Command'
+
+```
+/helloworld
+```

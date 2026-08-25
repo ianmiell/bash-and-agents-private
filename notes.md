@@ -16,6 +16,9 @@ TODO look at these suggestions:
 Course submission:
   https://docs.google.com/document/d/1puS896JkDgNtpo41cLRjMpq1qkRvRuXhSRl7w-PllPY/edit?tab=t.0
 
+Presentation:
+  https://docs.google.com/presentation/d/1oXzgPDM7NVjt3ePTac_iplPZiemizh4z0pMSqlHmF74
+
 ## PROPOSED STRUCTURE
 
 - Definitions
