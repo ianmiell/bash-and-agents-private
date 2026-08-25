@@ -1,6 +1,6 @@
 ### Monitors
 
-What is a monitor? Create a montitor
+What is a monitor? Create a monitor
 
 Inbuilt tool. It can watch for things and take actions.
 

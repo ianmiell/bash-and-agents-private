@@ -1,7 +1,11 @@
-## CORSE STRUCTURE
-How does claude use shell to research a codebase? Can  you get a list of shell commands run?
+## COURSE STRUCTURE
 
 "In this course with Ian Miell, developers and technical practitioners will learn how AI coding agents use shell and command-line tools in real work and how Claude Code uses tools, commands, skills, hooks, plug-ins, subagents, and monitors. Through live demonstrations and practical exercises, you’ll create a simple skill, add a script to that skill, configure hooks to log shell and tool use, and examine the security implications of allowing an AI agent to execute commands."
+
+Questions answered:
+
+- How does claude use shell to research a codebase?
+- Can you get a list of shell commands run?
 
 TODO look at these suggestions:
   - I believe things like NVIDIA’s OpenShell, and their secure sandbox approach to agents might be worth covering?
@@ -14,48 +18,23 @@ Course submission:
 
 ## PROPOSED STRUCTURE
 
-THOUGHTS:
-  - Definitions
-    - TODO (see below)
-  - Context engineering
-    - Shell as gatherer of context
-      - rg, fd
-    - CLAUDE.md
-  - Command design for agents
-    - Machine-readable output
-      - JSON
-        - jq
-        - JSON and MCP Servers
-    - Predictable exit codes TODO ASK
-    - Helpful help TODO ASK does AI use this?
-    - Useful error/output messages
-    - TODO:
-  - Skill creation
-    - Demo
-  - Monitors / commands etc
-    - Monitors and shell concepts (bg / fg etc)
-    - Hooks for logging
-  - Security
-    - Operating context
-      - browser vs desktop vs agent
-      - agent in sandbox
-    - Permissions
-      - User permissions
-      - Agent permissions
-      - API permissions (eg cloud user permissions)
-      - Human approval
-    - Read vs write commands (but be careful eg with awk)
-    - Secrets?
-      - .env / env files
-    - Imported skills
-    - Prompt injection
-      - Malicious instructions
+- Definitions
+  - `definitions.md`
+- Context engineering
+  - `context_engineering/context_engineering.md`
+- Command design for agents
+  - `command_design/command_design.md`
+- Skill creation
+  - `agent_concepts/skills.md`
+- Monitors / commands etc
+  - Monitors and shell concepts (bg / fg etc)
+  - Hooks for logging
+- Security
+  - `security/security.md`
 
 SUGGESTIONS:
 Ask an agent to explain an unfamiliar repository and reconstruct its search process.
 Put malicious prompt-injection text in a repository.
-
-
 
 ### General comments
   "AI uses shell as its hands"
@@ -68,28 +47,17 @@ Put malicious prompt-injection text in a repository.
 You can run commands with `shell command`
 It burns tokens (obvs) and takes longer though!
 
-#### High Level Concepts
-LLM
-  The 'thing' that takes input (context) and produces output (simple view - internals of LLMs can get much more complex)
-Agent
-  Program that manages input and output to an LLM
-  It's just a program. The program manages how the LLM is called and what to do with its outputs.
-  But these programs follow certain patterns (which brings us to other agent concepts).
-  And, specifically a claude agent (in .claude/agents)
-  How the agent does this is its secret sauce (if it's not open source). It might add data to your "prompt" before it dispatches is to the LLM.
-Agentic AI
-  TODO
-Harness
-  Agent = LLM + Harness
-
 #### Agent Concepts (covered in own sections)
-commands.md
-hooks.md
-monitors.md
-plugins.md
-skills.md
-subagent.md
-tools.md
+
+```
+agent_concepts/commands.md
+agent_concepts/hooks.md
+agent_concepts/monitors.md
+agent_concepts/plugins.md
+agent_concepts/skills.md
+agent_concepts/subagent.md
+agent_concepts/tools.md
+```
 
 Any more terminology of interest?
 

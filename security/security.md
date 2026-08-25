@@ -1,0 +1,26 @@
+- Operating context - where is my shell being run?
+  - Browser - server context (opaque to us)
+  - Desktop - VM
+  - Agent (eg claude)
+    - /sandbox
+      - Choose: sandbox bash tool, with regular permissions
+      - Prompt: awk should run 'cat /etc/hosts' (it flags)
+- Permissions
+  - User permissions
+  - Agent permissions
+  - API permissions (eg cloud user permissions)
+  - Human approval
+- Read vs write commands
+  - But be careful
+    - eg
+    - awk 'BEGIN { system("id") }'
+    - find . -exec ...
+    - `gsed 's/.*/id/e'`
+  - Agents can go beyond their remits if you give them the context to do this (eg do what you have to do to break out of your sandbox)
+- Secrets?
+  - .env / env files
+  - Leaking credential risk
+- Imported skills
+  - If you import skills or tools from elsewhere, there is a risk that it can pollute your context.
+  - Prompt injection
+    - Malicious instructions
