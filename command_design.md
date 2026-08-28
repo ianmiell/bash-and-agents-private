@@ -7,6 +7,7 @@ Avoid commands that depend on cwd - make it put the path in
 Avoid natural language arguments, make it use explicit arguments where possible
 Give agent option to limit output
 Use UNIX principles 'one thing well', 'stateless' with structured output
+Dry run option
 
 Go to branch 7-* of bash-and-agents-project, run up `claude` and then 'deploy the app to test if it looks healthy, and extract the deploy time'
 
