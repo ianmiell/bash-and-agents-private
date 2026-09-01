@@ -18,7 +18,7 @@ How does a skill get triggered automatically?
   ⏺ Skill(helloworld)
     ⎿  Successfully loaded skill
 
-To clear context:
+To clear context since agent loaded:
 
 ```
 /clear

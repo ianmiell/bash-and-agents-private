@@ -4,12 +4,12 @@
   - Agent (eg claude)
     - /sandbox
       - Choose: sandbox bash tool, with regular permissions
-      - Prompt: awk should run 'cat /etc/hosts' (it flags)
+      - By default, bash commands inside the sandbox can write to the working directory, the session temp directory, and any directories you’ve added with --add-dir, /add-dir, or permissions.additionalDirectories.
+  - As with any security concern, you need to think about what the entity has access to, eg systems accounts.
+  - Which tools are switched on? Permissions!
 - Permissions
-  - User permissions
-  - Agent permissions
-  - API permissions (eg cloud user permissions)
-  - Human approval
+  - /permissions
+    - git branch: 5-permissions
 - Read vs write commands
   - But be careful
     - eg
@@ -17,10 +17,8 @@
     - find . -exec ...
     - `gsed 's/.*/id/e'`
   - Agents can go beyond their remits if you give them the context to do this (eg do what you have to do to break out of your sandbox)
-- Secrets?
-  - .env / env files
-  - Leaking credential risk
-- Imported skills
-  - If you import skills or tools from elsewhere, there is a risk that it can pollute your context.
-  - Prompt injection
-    - Malicious instructions
+- Leakage - 4-security
+  - Imported skills
+    - If you import skills or tools from elsewhere, there is a risk that it can pollute your context.
+    - Prompt injection
+      - Malicious instructions
